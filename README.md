@@ -3,12 +3,11 @@ jAgent
 
 Metadata
 --------
-When executed, **jAgent** adds to the `<html>` tag of the page a list of classes representing the client's browser features. Every class represents an specific feature, making very easy
-This _metadata_ can be
-later used in CSS or JavaScript to …
+When executed, **jAgent** adds a list of classes to the `<html>` tag of the page. These classes represent the client's browser features, and every class corresponds to an specific feature. Below you can see the `<html>` tag of the example page when loaded on my computer:
 
     <html class="webkit chrome chrome_22 mac mac_10 mac_10_8 orientation_landscape max_width_1440">
 
+As you can see, at the time of writing this, I'm using Chrome version 22 on a Mac OS X 10.8 (Mountain Lion). The orientation of the browser is landscape (meaning the browser is wider than it's tall), and the screen size bucket assigned to the page is 1440px. Below, I'll talk a bit more about orientation and screen buckets.
 
 ### Main tags
 
