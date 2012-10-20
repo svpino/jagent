@@ -5,9 +5,9 @@ Metadata
 --------
 When executed, **jAgent** adds a list of classes to the `<html>` tag of the page. These classes represent the client's browser features, and every class corresponds to an specific feature. Below you can see an example of the `<html>` tag after executing **jAgent**:
 
-    <html class="webkit chrome chrome_22 mac mac_10 mac_10_8 orientation_landscape max_width_1440">
+    <html class="webkit chrome chrome_22 mac mac_10 mac_10_8 orientation_landscape">
 
-As you can see, the above tag belongs to a page loaded in Chrome version 22 on a Mac OS X 10.8 (Mountain Lion). The orientation of the browser is landscape (meaning the browser is wider than it's tall), and the corresponding screen size bucket is 1440px (we'll talk later a bit more about [orientation](#orientation) and [screen buckets](#screen-size-buckets)).
+As you can see, the above tag belongs to a page loaded in Chrome version 22 on a Mac OS X 10.8 (Mountain Lion), and the orientation of the browser is landscape (meaning the browser is wider than it's tall). Below we'll talk later a bit more about [orientation](#orientation).
 
 ### Main tags
 Here is the list with all the main tags created by *jAgent*. This list contains the _base_ tags only. You'll see later how some these main tags will be combined with versions to create a new set of useful features.
@@ -29,9 +29,6 @@ Browser and Operating System tags will also include their version number when av
 
 ### Orientation
 The orientation attribute represents the screen orientation state of the device where the page was loaded. This value will be computed using the `window.onorientationchange` event, and will be changed accordingly every time the user turns the device. For non-mobile devices, this attribute is computed based on the `width` and `height` of the browser window. If `width >= height` then the browser is considered to be in `landscape` mode, while if `width < height` `portrait` will be returned.
-
-### Screen Size Buckets
-TBD
 
 ### Additional Features
 Here are some other features that will be added as tags for your convenience:
