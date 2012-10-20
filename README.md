@@ -32,11 +32,30 @@ The orientation attribute represents the screen orientation state of the device 
 
 ### Screen Size Buckets
 
-#### Other
+### Additional Features
+Here are some other features that will be added as tags for your convenience:
+- `retina`: Present on devices with retina display. A device is considered to have retina display when `window.devicePixelRatio === 2`.
 
-- **Browsers**: gecko, webkit, chrome, chrome22, safari, safari6, msie, msie8, firefox, firefox16, opera, opera3, konqueror, iron, mozilla  
-- **Operating Systems**: mac, mac10, mac10_8, windows, windows_nt, windows_2000, windows_xp, windows_vista, windows_7, windows_8, freebsd, linux
-- **Mobile devices**: mobile, ios, ios6, ios6_0, ipad, iphone, ipod, android, android4, android4_1, j2me, kindle, playbook, blackberry 
-- **Screen sizes**: max_width_320, max_width_1920
-- **Orientation**: orientation_portrait, orientation_landscape
-- **Retina Displays**: retina
+
+Example
+-------
+Let's take a look to a very simple example of how to use *jAgent*.
+
+1. Start by downloading the library (jagent.js). Make sure you reference it in your project along with the latest version of jQuery. The following code will do it for you:
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="jagent.js" type="text/javascript"></script>
+
+2. Add a `<div>` tag anywhere in your page:
+
+	<div class='sample'></div>
+	
+3. Now add the following CSS code to your styles:
+ 
+	.sample { width: 200px; height: 200px; }
+    .chrome .sample { background-color: Red; }
+    .firefox .sample { background-color: Green; }
+    .msie .sample { background-color: Blue; }
+    .msie8 .sample { background-color: Yellow; }
+    
+You can go ahead now and load the page in a browser. As you may imagine, the color of the `<div>` we added depends on the browser we are loading the page. In Chrome the color will be red, meanwhile Internet Explorer will display it Blue unless it's IE 8, which will display the `<div>` in Yellow.   
