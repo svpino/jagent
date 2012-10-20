@@ -158,45 +158,45 @@ function initializeJAgent() {
 	getBrowserInformationForFirefox = function() {
 		return $.jagent.GECKO + " " + $.jagent.FIREFOX 
 			+ (/firefox\/((\d+)(\.(\d+))(\.\d+)*)/.test(userAgent) 
-				? ' ' + $.jagent.FIREFOX + RegExp.$2 + ' ' + $.jagent.FIREFOX + RegExp.$2 + "_" + RegExp.$4 
+				? ' ' + $.jagent.FIREFOX + '_' + RegExp.$2 + ' ' + $.jagent.FIREFOX + '_' + RegExp.$2 + "_" + RegExp.$4 
 				: '');
 	};
 	
 	getBrowserInformationForOpera = function() {
 		return $.jagent.OPERA + (/version\/((\d+)(\.(\d+))(\.\d+)*)/.test(userAgent) 
-			? ' ' + $.jagent.OPERA + RegExp.$2 + ' ' + $.jagent.OPERA + RegExp.$2 + "_" + RegExp.$4 
+			? ' ' + $.jagent.OPERA + '_' + RegExp.$2 + ' ' + $.jagent.OPERA + '_' + RegExp.$2 + "_" + RegExp.$4 
 			: (/opera(\s|\/)(\d+)\.(\d+)/.test(userAgent) 
-				? ' ' + $.jagent.OPERA + RegExp.$2 + " " + $.jagent.OPERA + RegExp.$2 + "_" + RegExp.$3 
+				? ' ' + $.jagent.OPERA + '_' + RegExp.$2 + " " + $.jagent.OPERA + '_' + RegExp.$2 + "_" + RegExp.$3 
 				: ''));
 	};
 	
 	getBrowserInformationForChrome = function() {
 		return $.jagent.WEBKIT + ' ' + $.jagent.CHROME + (/chrome\/((\d+)(\.(\d+))(\.\d+)*)/.test(userAgent)
-			? ' ' + $.jagent.CHROME + RegExp.$2 + ((RegExp.$4 > 0) 
-				? ' ' + $.jagent.CHROME + RegExp.$2 + "_" + RegExp.$4 
+			? ' ' + $.jagent.CHROME + '_' + RegExp.$2 + ((RegExp.$4 > 0) 
+				? ' ' + $.jagent.CHROME + '_' + RegExp.$2 + "_" + RegExp.$4 
 				: '')
 			:'');
 	};
 	
 	getBrowserInformationForSafari = function() {
 		return ($.jagent.WEBKIT + ' ' + $.jagent.SAFARI + (/version\/((\d+)(\.(\d+))(\.\d+)*)/.test(userAgent)
-			? ' ' + $.jagent.SAFARI + RegExp.$2 + " " + $.jagent.SAFARI + RegExp.$2+RegExp.$3.replace('.', '_')
+			? ' ' + $.jagent.SAFARI + '_' + RegExp.$2 + " " + $.jagent.SAFARI + '_' + RegExp.$2 + RegExp.$3.replace('.', '_')
 			:  (/ Safari\/(\d+)/i.test(userAgent) 
 				? ((RegExp.$1=="419" || RegExp.$1=="417" || RegExp.$1=="416" || RegExp.$1=="412" ) 
-					? ' '+ $.jagent.SAFARI + '2_0' 
+					? ' '+ $.jagent.SAFARI + '_2_0' 
 					: RegExp.$1 == "312" 
-						? ' ' + $.jagent.SAFARI + '1_3'
+						? ' ' + $.jagent.SAFARI + '_1_3'
 						: RegExp.$1=="125" 
-							? ' '+ $.jagent.SAFARI + '1_2'
+							? ' '+ $.jagent.SAFARI + '_1_2'
 							: RegExp.$1=="85" 
-								? ' ' + $.jagent.SAFARI + '1_0'
+								? ' ' + $.jagent.SAFARI + '_1_0'
 								: '')
 				: '')));
 	};
 	
 	getBrowserInformationForAndroid = function() {
 		return $.jagent.ANDROID + (/Version\/(\d+)(\.(\d+))+/i.test(userAgent)
-			? " " + $.jagent.ANDROID + RegExp.$1 + " " + $.jagent.ANDROID + RegExp.$1 + RegExp.$2.replace('.', '_')
+			? " " + $.jagent.ANDROID + '_' + RegExp.$1 + " " + $.jagent.ANDROID + '_' + RegExp.$1 + RegExp.$2.replace('.', '_')
 			: '')
 			+ (/Android (.+); (.+) Build/i.test(userAgent)
 				? ' ' + $.jagent.DEVICE + ((RegExp.$2).replace(/ /g,"_")).replace(/-/g, "_")
@@ -205,23 +205,23 @@ function initializeJAgent() {
 	
 	getBrowserInformationForBlackberry = function() {
 		return $.jagent.BLACKBERRY + (/Version\/(\d+)(\.(\d+)+)/i.test(userAgent)
-			? " " + $.jagent.BLACKBERRY + RegExp.$1 + " " + $.jagent.BLACKBERRY + RegExp.$1 + RegExp.$2.replace('.','_')
+			? " " + $.jagent.BLACKBERRY + '_' + RegExp.$1 + " " + $.jagent.BLACKBERRY + '_' + RegExp.$1 + RegExp.$2.replace('.','_')
 			: (/Blackberry ?(([0-9]+)([a-z]?))[\/|;]/gi.test(userAgent) 
-				? ' ' + $.jagent.BLACKBERRY + RegExp.$2 + (RegExp.$3 ? ' ' + $.jagent.BLACKBERRY + RegExp.$2 + RegExp.$3 : '')
+				? ' ' + $.jagent.BLACKBERRY + '_' + RegExp.$2 + (RegExp.$3 ? ' ' + $.jagent.BLACKBERRY + '_' + RegExp.$2 + RegExp.$3 : '')
 				: ''));
 	};
 	
 	getOperatingSystemInformationForAppleDevices = function() {
 		return ((/CPU( iPhone)? OS (\d+[_|\.]\d+([_|\.]\d+)*)/i.test(userAgent)  
-			? $.jagent.IOS + version($.jagent.IOS, RegExp.$2) 
-			: '') + ' ' + ( /(ip(ad|od|hone))/gi.test(userAgent) 
+			? $.jagent.IOS + '_' + version($.jagent.IOS, RegExp.$2) 
+			: '') + ' ' + (/(ip(ad|od|hone))/gi.test(userAgent) 
 				? RegExp.$1 
 				: ""));
 	};
 	
 	getOperatingSystemInformationForMac = function() {
 		return $.jagent.MAC + (/mac os x ((\d+)[.|_](\d+))/.test(userAgent) 
-			? (' ' + $.jagent.MAC + (RegExp.$2) + ' ' + $.jagent.MAC + (RegExp.$1).replace('.',"_") )
+			? (' ' + $.jagent.MAC + '_' + RegExp.$2 + ' ' + $.jagent.MAC + '_' + RegExp.$1.replace('.',"_"))
 			: '');
 	};
 	

@@ -61,7 +61,7 @@ Another useful feature of **jAgent** is an interface with some JavaScript method
 
 Example
 -------
-Let's take a look to a very simple example of how to use *jAgent*.
+Let's take a look to a very simple example of how to use **jAgent**.
 
 Start by downloading the [library](https://github.com/svpino/jagent/blob/master/jagent.js). Make sure you reference it in your project along with the latest version of jQuery. The following code will do it for you:
 
