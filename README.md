@@ -7,7 +7,7 @@ When executed, **jAgent** adds a list of classes to the `<html>` tag of the page
 
     <html class="webkit chrome chrome_22 mac mac_10 mac_10_8 orientation_landscape max_width_1440">
 
-As you can see, at the time of writing this I'm using Chrome version 22 on a Mac OS X 10.8 (Mountain Lion). The orientation of the browser is landscape (meaning the browser is wider than it's tall), and the corresponding screen size bucket is 1440px. [Below](#orientation), I talk a bit more about orientation and [screen buckets](#screen-size-buckets).
+As you can see, at the time of writing this I'm using Chrome version 22 on a Mac OS X 10.8 (Mountain Lion). The orientation of the browser is landscape (meaning the browser is wider than it's tall), and the corresponding screen size bucket is 1440px. [Below](#orientation), I talk a bit more about [orientation](#orientation) and [screen buckets](#screen-size-buckets).
 
 ### Main tags
 
@@ -24,6 +24,7 @@ As you can see, at the time of writing this I'm using Chrome version 22 on a Mac
 - **Apple Mac OS**: mac10, mac10_8, mac10_7, …
 
 ### Orientation
+The orientation attribute represents the screen orientation state of the device where the page was loaded. This value will be computed using the `window.onorientationchange` event, and will be changed accordingly every time the user turns the device. For non-mobile devices, this attributes is computed based on the `width` and `height` of the browser window. If `width >= height` then the browser is considered to be in `landscape` mode, while if `width < height` then `portrait` will be returned.
 
 ### Screen Size Buckets
 
