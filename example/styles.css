@@ -1,0 +1,40 @@
+body {
+	font-family: Georgia;
+	font-size: 1.2em;
+	color: #333;
+}
+
+.code {
+	font-family: Courier;
+	font-size: 0.8em;
+}
+
+ul.code li {
+	padding-left: 10px;
+	padding: 2px 0;
+	margin: 4px;
+}
+
+ul.code li.true {
+	background-color: #ddd;
+}
+
+.css {
+	border: 1px solid #000;
+	padding: 4px;
+	background-color: #eee;
+}
+
+.css td {
+	width: 90px;
+	height: 60px;
+	text-align: center;
+	
+}
+
+.chrome .css td.chrome,
+.safari .css td.safari,
+.firefox .css td.firefox,
+.msie .css td.msie {
+	background-color: Orange;
+}
