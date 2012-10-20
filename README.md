@@ -7,7 +7,7 @@ When executed, **jAgent** adds a list of classes to the `<html>` tag of the page
 
     <html class="webkit chrome chrome_22 mac mac_10 mac_10_8 orientation_landscape max_width_1440">
 
-As you can see, at the time of writing this I'm using Chrome version 22 on a Mac OS X 10.8 (Mountain Lion). The orientation of the browser is landscape (meaning the browser is wider than it's tall), and the corresponding screen size bucket is 1440px. [Below](link.address.here), I talk a bit more about orientation and screen buckets.
+As you can see, at the time of writing this I'm using Chrome version 22 on a Mac OS X 10.8 (Mountain Lion). The orientation of the browser is landscape (meaning the browser is wider than it's tall), and the corresponding screen size bucket is 1440px. [Below](#orientation), I talk a bit more about orientation and [screen buckets](#screen-size-buckets).
 
 ### Main tags
 
