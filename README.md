@@ -3,8 +3,11 @@ jAgent
 
 Metadata
 --------
-When executed, jAgent adds to the `<html>` tag of the page a list of tags representing the client's browser features. This _metadata_ can be
-later used in CSS or JavaScript to ...
+When executed, **jAgent** adds to the `<html>` tag of the page a list of classes representing the client's browser features. Every class represents an specific feature, making very easy
+This _metadata_ can be
+later used in CSS or JavaScript to …
+
+    <html class="webkit chrome chrome_22 mac mac_10 mac_10_8 orientation_landscape max_width_1440">
 
 
 ### Main tags
