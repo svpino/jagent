@@ -41,16 +41,16 @@ Example
 -------
 Let's take a look to a very simple example of how to use *jAgent*.
 
-1. Start by downloading the [library](https://github.com/svpino/jagent/blob/master/jagent.js). Make sure you reference it in your project along with the latest version of jQuery. The following code will do it for you:
+Start by downloading the [library](https://github.com/svpino/jagent/blob/master/jagent.js). Make sure you reference it in your project along with the latest version of jQuery. The following code will do it for you:
 
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
       <script src="jagent.js" type="text/javascript"></script>
 
-2. Add a `<div>` tag anywhere in your page:
+Add a `<div>` tag anywhere in your page:
 
 	`<div class='sample'></div>`
 		
-3. Now add the following CSS code to your styles:
+Now add the following CSS code to your styles:
  
 	`.sample { width: 200px; height: 200px; }`
     `.chrome .sample { background-color: Red; }`
