@@ -31,11 +31,33 @@ Browser and Operating System tags will also include their version number when av
 The orientation attribute represents the screen orientation state of the device where the page was loaded. This value will be computed using the `window.onorientationchange` event, and will be changed accordingly every time the user turns the device. For non-mobile devices, this attribute is computed based on the `width` and `height` of the browser window. If `width >= height` then the browser is considered to be in `landscape` mode, while if `width < height` `portrait` will be returned.
 
 ### Screen Size Buckets
+TBD
 
 ### Additional Features
 Here are some other features that will be added as tags for your convenience:
-- `retina`: Present on devices with retina display. A device is considered to have retina display when `window.devicePixelRatio === 2`.
+- **retina**: Present on devices with retina display. A device is considered to have retina display when `window.devicePixelRatio === 2`.
 
+Methods
+-------
+Another useful feature of **jAgent** is an interface with some JavaScript methods to help test the existence of the same features that we've seen so far. Below is the complete list of supported methods:
+
+- $.jagent.isMobile()
+- $.jagent.isIOS()
+- $.jagent.isAndroid()
+- $.jagent.isIPad()
+- $.jagent.isIPhone()
+- $.jagent.isIPod()
+- $.jagent.isKindle()
+- $.jagent.isBlackberry()
+- $.jagent.isPlaybook()
+- $.jagent.isJ2ME()
+- $.jagent.isRetina()
+- $.jagent.isPortrait()
+- $.jagent.isLandscape()
+- $.jagent.isChrome()
+- $.jagent.isFirefox()
+- $.jagent.isSafari()
+- $.jagent.isMSIE()
 
 Example
 -------
@@ -43,19 +65,21 @@ Let's take a look to a very simple example of how to use *jAgent*.
 
 Start by downloading the [library](https://github.com/svpino/jagent/blob/master/jagent.js). Make sure you reference it in your project along with the latest version of jQuery. The following code will do it for you:
 
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-      <script src="jagent.js" type="text/javascript"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="jagent.js" type="text/javascript"></script>
 
 Add a `<div>` tag anywhere in your page:
 
-	`<div class='sample'></div>`
+	<div class='sample'></div>
 		
 Now add the following CSS code to your styles:
  
-	`.sample { width: 200px; height: 200px; }`
-    `.chrome .sample { background-color: Red; }`
-    `.firefox .sample { background-color: Green; }`
-    `.msie .sample { background-color: Blue; }`
-    `.msie8 .sample { background-color: Yellow; }`
+	.sample { width: 200px; height: 200px; }
+    .chrome .sample { background-color: Red; }
+    .firefox .sample { background-color: Green; }
+    .msie .sample { background-color: Blue; }
+    .msie8 .sample { background-color: Yellow; }
     
-You can go ahead now and load the page in a browser. As you may imagine, the color of the `<div>` we added depends on the browser we are loading the page. In Chrome the color will be red, meanwhile Internet Explorer will display it Blue unless it's IE 8, which will display the `<div>` in Yellow.   
+You can go ahead now and load the page in a browser. As you may imagine, the color of the `<div>` we added depends on the browser we are loading the page in. In Chrome the color will be red, meanwhile Internet Explorer will display it blue unless it's IE 8, which will display the `<div>` in yellow.
+
+For a more complex example, download the [example](https://github.com/svpino/jagent/tree/master/example) html included in the project repository.   
