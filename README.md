@@ -8,7 +8,7 @@ When executed, **jAgent** adds a list of classes to the `<html>` tag of the page
 
     <html class="webkit chrome chrome_22 mac mac_10 mac_10_8 orientation_landscape">
 
-As you can see, the above tag belongs to a page loaded in Chrome version 22 on a Mac OS X 10.8 (Mountain Lion), and the orientation of the browser is landscape (meaning the browser is wider than it's tall). Below we'll talk later a bit more about [orientation](#orientation).
+As you can see, the above tag belongs to a page loaded in Chrome version 22 on a Mac OS X 10.8 (Mountain Lion), and the orientation of the browser is landscape (meaning the browser is wider than it's tall). We'll talk later a bit more about [orientation](#orientation).
 
 ### Main tags
 Here is the list with all the main tags created by *jAgent*. This list contains the _base_ tags only. You'll see later how some these main tags will be combined with versions to create a new set of useful features.
@@ -64,7 +64,7 @@ Let's take a look to a very simple example of how to use **jAgent**.
 Start by downloading the [library](https://github.com/svpino/jagent/blob/master/jagent.js). Make sure you reference it in your project along with the latest version of jQuery. The following code will do it for you:
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script src="jagent.js" type="text/javascript"></script>
+    <script src="jquery.jagent.js" type="text/javascript"></script>
 
 Add a `<div>` tag anywhere in your page:
 
