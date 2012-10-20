@@ -3,7 +3,7 @@ jAgent
 
 Metadata
 --------
-When executed, **jAgent** adds a list of classes to the `<html>` tag of the page. These classes represent the client's browser features, and every class corresponds to an specific feature. Below you can see the `<html>` tag of the example page when loaded on my computer:
+When executed, **jAgent** adds a list of classes to the `<html>` tag of the page. These classes represent the client's browser features, and every class corresponds to an specific feature. Below you can see the `<html>` tag of a page when loaded on my computer:
 
     <html class="webkit chrome chrome_22 mac mac_10 mac_10_8 orientation_landscape max_width_1440">
 
