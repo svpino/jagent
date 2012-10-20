@@ -1,5 +1,6 @@
 jAgent
 ======
+Version 1.0
 
 Metadata
 --------

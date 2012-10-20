@@ -41,7 +41,6 @@ function jAgent() {
 	this.FREEBSD = 'freebsd';
 	this.X11 = 'x11';
 	this.LINUX = 'linux';
-	this.LANGUAGE = 'language_';
 	this.RETINA = 'retina';
 	this.PORTRAIT = 'portrait';
 	this.LANDSCAPE = 'landscape';	
@@ -263,14 +262,6 @@ function initializeJAgent() {
 			: '';
 	};
 	
-	getUserLanguageInformation = function() {
-		return (/[; |\[](([a-z]{2})(\-[a-z]{2})?)[)|;|\]]/i.test(userAgent))
-			? ($.jagent.LANGUAGE + RegExp.$2).replace("-", "_") + (RegExp.$3 != '' 
-				? (' ' + $.jagent.LANGUAGE + RegExp.$1).replace("-", "_")
-				: '')
-			: '';
-	};
-	
 	getAdditionalInformation = function() {
 		var isMobile = is($.jagent.ANDROID + "|" 
 			+ $.jagent.MOBILE + "|" 
@@ -290,7 +281,7 @@ function initializeJAgent() {
 	};
 	
 	var	html = document.documentElement;
-	var browserInformation = [getBrowserInformation(), getOperatingSystemInformation(), getUserLanguageInformation(), getAdditionalInformation()];
+	var browserInformation = [getBrowserInformation(), getOperatingSystemInformation(), getAdditionalInformation()];
 
 	function processOrientationInformation() {
 		var orientation;
@@ -316,26 +307,9 @@ function initializeJAgent() {
     	html.className += ' orientation_' + orientation + ' ';
   	}
 
-	function processWidthInformation() {
-		var SCREEN_BUCKETS = [320, 480, 640, 768, 1024, 1152, 1280, 1440, 1680, 1920, 2560];
-		var width = $(window).width();
-		var max_width;
-		
-		for (var i = 0; i < SCREEN_BUCKETS.length - 1; i++) { 
-			if (width <= SCREEN_BUCKETS[i]) { 
-				max_width = SCREEN_BUCKETS[i]; 
-				break; 
-			}
-		}
-		
-		html.className = html.className.replace(/ [min_|max_]+[width|height]_\d+/g, "");
-		html.className += ' max_width_' + max_width + ' ';
-	}
-	
 	window.onorientationchange = processOrientationInformation;
-    window.onresize = processWidthInformation;
+    window.onresize = processOrientationInformation;
 	processOrientationInformation();
-	processWidthInformation();	
 	
 	html.className = (browserInformation.join(' ') + html.className).replace(/^ /, "").replace(/ +/g," ");
 
