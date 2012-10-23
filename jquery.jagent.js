@@ -76,10 +76,6 @@ function jAgent() {
 		return self.is(self.BLACKBERRY);
 	}
 	
-	this.isBlackberry = function() {
-		return self.is(self.BLACKBERRY);
-	}
-	
 	this.isPlaybook = function() {
 		return self.is(self.PLAYBOOK);
 	}
@@ -227,7 +223,7 @@ function initializeJAgent() {
 	};
 	
 	getBrowserInformation = function() {
-		return (!(/opera|webtv/i.test(userAgent)) && /msie\s(\d+)/.test(userAgent)) ? ($.jagent.MSIE + ' ' + $.jagent.MSIE + (/trident\/4\.0/.test(userAgent) ? '8' : RegExp.$1))
+		return (!(/opera|webtv/i.test(userAgent)) && /msie\s(\d+)/.test(userAgent)) ? ($.jagent.MSIE + ' ' + $.jagent.MSIE + '_' + (/trident\/4\.0/.test(userAgent) ? '8' : RegExp.$1))
 			: is($.jagent.FIREFOX + '/') ? getBrowserInformationForFirefox()	
 			: is($.jagent.GECKO + '/') ? $.jagent.GECKO
 			: is($.jagent.OPERA) ? getBrowserInformationForOpera() 
