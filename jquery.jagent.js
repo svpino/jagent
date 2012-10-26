@@ -37,7 +37,6 @@ function jAgent() {
 	this.LANDSCAPE = 'landscape';	
 
 	this.metadata;
-	
 	var self = this;
 	
 	this.initialize = function(value) {
