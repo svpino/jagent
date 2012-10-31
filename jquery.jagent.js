@@ -1,5 +1,5 @@
 /* 
-	jAgent 1.0.2012.10.20 
+	jAgent 1.0.2012.10.31 
 	https://github.com/svpino/jagent
 */
 
