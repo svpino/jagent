@@ -95,8 +95,8 @@ function jAgent() {
 		return self.is(self.SAFARI);
 	}
 	
-	this.isIE = function() {
-		return self.is(self.IE);
+	this.isMSIE = function() {
+		return self.is(self.MSIE);
 	}
 	
 	this.isRetina = function() {
