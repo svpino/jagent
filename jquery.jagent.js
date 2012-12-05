@@ -1,5 +1,5 @@
 /* 
-	jAgent 1.0.2012.10.31 
+	jAgent 1.0.2012.12.05 
 	https://github.com/svpino/jagent
 */
 
@@ -291,6 +291,8 @@ function initializeJAgent() {
     	
     	html.className = html.className.replace(/ ?orientation_\w+/g, "");
     	html.className += ' orientation_' + orientation + ' ';
+		
+		$.jagent.initialize(html.className);
   	}
 
 	window.onorientationchange = processOrientationInformation;
